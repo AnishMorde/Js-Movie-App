@@ -1,0 +1,118 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monospace;
+    margin: 0;
+    background-color: #22254b;
+}
+
+
+.movie{
+    background-color:#373b69 ;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.3);
+    width: 300px;
+    margin: 2.5rem;
+    position: relative;
+}
+
+.movie img{
+    object-fit: cover;
+    
+  width:100%;
+}
+
+.movie-info{
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding:0.5rem 1rem 1rem;
+}
+
+.movie-info h3{
+    margin: 0;
+}
+
+.movie-info span{
+    background-color: #22254b;
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+
+    
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+header{
+    background-color:#373b69  ;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header #search{
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    
+}
+
+header input::placeholder{
+    color: white;
+}
+
+header input:focus{
+    outline: none;
+}
+
+.overview{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    opacity: 0;
+    visibility: hidden;
+     padding: 2rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in;
+
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.overview h4 {
+    margin-top: 0;
+}
+
+
+#logo{
+    color: rgb(207, 206, 206);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#logo:hover{
+    color: #e0d100; 
+    transform: scale(1.1); 
+    text-shadow: 2px 2px 8px rgba(224, 209, 0, 0.7);
+}
